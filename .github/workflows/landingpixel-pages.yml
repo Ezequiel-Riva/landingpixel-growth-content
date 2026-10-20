@@ -20,6 +20,8 @@ jobs:
       - uses: actions/checkout@v6
       - uses: actions/configure-pages@v5
         id: pages
+        with:
+          enablement: true
       - name: Build static articles and navigation
         env:
           PAGES_BASE_URL: ${{ steps.pages.outputs.base_url }}
